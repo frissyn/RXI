@@ -12,10 +12,19 @@ module Structs
             :wButtons, :int,
             :bLeftTrigger, :int,
             :bRightTrigger, :int,
-            :ThumbLX, :int,
-            :ThumbLY, :int,
-            :ThumbRX, :int,
-            :ThumbLY, :int
+            :sThumbLX, :int,
+            :sThumbLY, :int,
+            :sThumbRX, :int,
+            :sThumbRY, :int
+    end
+
+    class XINPUT_KEYSTROKE < FFI::Struct
+        layout \
+            :VirtualKey, :int,
+            :Unicode, :bool,
+            :Flags, :int,
+            :UserIndex, :int,
+            :HidCode, :int
     end
 
     class XINPUT_STATE < FFI::Struct

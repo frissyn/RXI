@@ -1,4 +1,4 @@
-module Controller
+module Values
     class Buttons
         DPAD_UP = 1
         DPAD_DOWN = 2
