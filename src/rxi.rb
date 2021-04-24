@@ -2,7 +2,7 @@ require 'ffi'
 require_relative 'rxi/structs'
 require_relative 'rxi/controller'
 
-module Gamepad
+module RXI
     include Structs
     include Controller
 
