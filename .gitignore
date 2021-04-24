@@ -1,0 +1,11 @@
+# stuff
+*.gem
+*.rbc
+*.env
+/.config
+/pkg/
+/test/tmp/
+/tmp/
+/.bundle/
+/vendor/bundle
+Gemfile.lock
