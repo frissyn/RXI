@@ -4,19 +4,17 @@
 
 ### Quickstart
 
-Vibrate a controller at low motor speed:
+Vibrate a controller at a low motor speed:
 ```ruby
 require 'rxi'
 
-port = 0
-state =  RXI::XINPUT_STATE.new
-vibration = RXI::XINPUT_VIBRATION.new
+RXI.enable(true)
 
-vibration[:wLeftMotorSpeed] = RXI::Vibration::LOWER
-vibration[:wRightMotorSpeed] = RXI::Vibration::LOWER
+controller = RXI::XboxController.new(0)
+motorSpeed = RXI::Vibration::LOWER
 
 loop do
-    puts RXI.set_state(port, vibration)
+    controller.vibrate(motorSpeed, motorSpeed)
 end
 ```
 
